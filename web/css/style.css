@@ -1,0 +1,460 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+*, *:before, *:after {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+    background-image: url(../image/index.png);
+    background-color: #444753;
+    font: 14px/20px "Lato", Arial, sans-serif;
+    color: white;
+}
+.chat-header img,
+.chat .chat-history .message-data-name img,
+.list img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.1)
+}
+.chat-header img{
+    border:2px solid rgba(35, 198, 35, 0.64);
+}
+ul {
+    list-style: none
+}
+.container {
+    margin: 0 auto;
+    width: 750px;
+    background: #444753;
+    border-radius: 5px;
+}
+
+.people-list {
+    width: 250px;
+    float: left;
+}
+
+
+.people-list .fa-search {
+    position: relative;
+    left: -25px;
+}
+
+.people-list ul {
+    height: 100vh;
+}
+
+.people-list ul li {
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out
+}
+.people-list ul li:hover{
+    background: #6A6C75
+}
+.people-list img {
+    float: left;
+}
+
+.people-list .about {
+    float: left;
+    margin-top: 8px;
+}
+
+.people-list .about {
+    padding-left: 8px;
+}
+
+.people-list .status {
+    color: #92959E;
+}
+
+.chat {
+/*    width: calc(100% - 250px);*/
+/*    float: left;*/
+    width: 100%;
+    background: #F2F5F8;
+    border-radius: 5px;
+    color: #434651;
+    margin-top: 15px
+}
+
+.chat .chat-header {
+    padding: 10px 20px;
+    border-bottom: 2px solid white;
+}
+
+.chat .chat-header img {
+    float: left;
+}
+
+.chat .chat-header .chat-about {
+    float: left;
+    padding-left: 10px;
+    margin-top: 6px;
+}
+
+.chat .chat-header .chat-with {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.chat .chat-header .chat-num-messages {
+    color: #92959E;
+}
+
+/*
+.chat .chat-header .fa-star {
+    float: right;
+    color: #D8DADF;
+    font-size: 20px;
+    margin-top: 12px;
+}
+*/
+
+.chat .chat-history {
+    padding: 30px 30px 20px;
+    border-bottom: 2px solid #FFF;
+    overflow-y: scroll;
+    height: 400px;
+    position: relative
+}
+
+.chat .chat-history .message-data {
+    margin-bottom: 12px;
+}
+
+.chat .chat-history .message-data-time {
+    color: #666;
+    padding-left: 6px;
+}
+.chat .chat-history .message-data-name {
+    font-weight: bold
+}
+.chat .chat-history .message-data-name img {
+    
+}
+.chat .chat-history .message {
+    color: #FFF;
+    padding: 10px 12px;
+    line-height: 26px;
+    font-size: 16px;
+    border-radius: 7px;
+    margin-bottom: 30px;
+    max-width: 85%;
+    min-width: 40%;
+    position: relative;
+     animation: bounce 700ms linear both;
+}
+
+.chat .chat-history .message:after {
+    bottom: 100%;
+    left: 7%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: #FFF;
+    border-width: 10px;
+    margin-left: -10px;
+}
+
+.chat .chat-history .my-message {
+    background: #FFF;
+    color: #666
+}
+
+.chat .chat-history .other-message {
+    background: #4080FF;
+}
+
+.chat .chat-history .other-message:after {
+    border-bottom-color: #4080FF;
+    left: 93%;
+}
+
+.chat .chat-message {
+    padding: 10px 20px;
+    position: relative
+}
+
+.chat .chat-message textarea {
+    width: 100%;
+    border: none;
+    padding: 10px 20px;
+    font: 14px/22px "Lato", Arial, sans-serif;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    resize: none;
+}
+
+.chat .chat-message .fa-file-o, .chat .chat-message .fa-file-image-o {
+    font-size: 16px;
+    color: gray;
+    cursor: pointer;
+}
+
+.chat .chat-message button {
+    float: right;
+    color: #FFF;
+    font-size: 16px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: #444753;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out
+}
+.chat .chat-message button i {
+    transition: all 0.2s ease-in-out
+}
+.chat .chat-message button:hover {
+    box-shadow: 6px 5px 9px rgba(0,0,0,0.5)
+}
+.chat .chat-message button:hover i{
+    transform: rotate(30deg)
+}
+
+.online, .offline, .me {
+    margin-right: 3px;
+    font-size: 10px;
+}
+
+.online {
+    color: #86BB71;
+}
+
+.offline {
+    color: #E38968;
+}
+
+.me {
+    color: #4080FF;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.float-right {
+    float: right;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.typing {
+    position: absolute;
+    top: -25px;
+    left: 25px;
+    transition: all 0.3s ease-in-out;
+    transform: scale(0);
+}
+
+.typing i:first-child {
+    animation: ball .45s cubic-bezier(0, 0, 0.15, 1) alternate infinite; 
+}
+.typing i:nth-child(2){
+    animation: ball .45s cubic-bezier(0, 0, 0.15, 1) alternate infinite; 
+    animation-delay: .15s;
+}
+.typing i:last-child{
+    animation: ball .45s cubic-bezier(0, 0, 0.15, 1) alternate infinite; 
+    animation-delay: .3s;
+}
+
+@keyframes ball {
+  from {
+    transform: translateY(0) scaleY(.8);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  4.7% {
+    transform: matrix3d(0.45, 0, 0, 0, 0, 0.45, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  9.41% {
+    transform: matrix3d(0.883, 0, 0, 0, 0, 0.883, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  14.11% {
+    transform: matrix3d(1.141, 0, 0, 0, 0, 1.141, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  18.72% {
+    transform: matrix3d(1.212, 0, 0, 0, 0, 1.212, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  24.32% {
+    transform: matrix3d(1.151, 0, 0, 0, 0, 1.151, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  29.93% {
+    transform: matrix3d(1.048, 0, 0, 0, 0, 1.048, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  35.54% {
+    transform: matrix3d(0.979, 0, 0, 0, 0, 0.979, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  41.04% {
+    transform: matrix3d(0.961, 0, 0, 0, 0, 0.961, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  52.15% {
+    transform: matrix3d(0.991, 0, 0, 0, 0, 0.991, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  63.26% {
+    transform: matrix3d(1.007, 0, 0, 0, 0, 1.007, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  85.49% {
+    transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  100% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+}
+/* Register
+============================== */
+
+
+.app {
+  height: 500px;
+  width: 580px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  border-radius: 5px
+}
+
+.content {
+  background: #F2F5F8 url("https://cbwconline.com/IMG/Codepen/Mountains.svg") center 20% no-repeat;
+  background-size: 75px;
+  height: 100%;
+  width: 100%;
+  transition: .3s .2s;
+}
+
+.content.background {
+  background: #F2F5F8 url("https://cbwconline.com/IMG/Codepen/Mountains.svg") center 15% no-repeat;
+  background-size: 75px;
+}
+
+.button {
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+  background: #444753;
+  background-position: 0 200px;
+  height: 56px;
+  width: 120px;
+  margin: auto;
+  position: absolute;
+  left: 287px;
+  right: 0;
+  top: 75%;
+  border-radius: 28px;
+  transition: width .3s, border-radius .3s, height .3s .1s, top .3s .1s, background .0s .6s;
+}
+.button.login {
+  left: -287px;
+ 
+}
+.button.expanded {
+  height: 250px;
+  width: 90%;
+  border-radius: 5px;
+  top: 35%;
+  left: 0
+}
+
+
+
+form {
+  width: 100%;
+  margin: auto;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  transition: .3s .6s;
+}
+
+form.hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: .01s;
+}
+
+input {
+    display: inline-block;
+    width: 90%;
+    margin: 15px auto;
+    border: 0;
+    outline: 0;
+    font-size: 15px;
+    border-radius: 3px;
+    border: none;
+    padding: 15px 30px 15px 15px ;
+    color: white;
+    background: #6A6C75;
+}
+
+.sign-up {
+  width: 100%;
+  padding: 20px 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  font-size: 20px;
+  color: #FFF;
+  text-align: center;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.sign-up.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+button {
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+  background: #444753;
+  height: 56px;
+  width: 120px;
+  padding: 0;
+  margin: auto;
+  border: none;
+  border-radius: 28px;
+  overflow: hidden;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  color: #F9F9F9;
+  cursor: pointer;
+  font-size: 20px;
+  transition: .3s .7s, background .1s .3s;
+}
+
+button.hidden {
+  width: 0;
+}
+
